@@ -64,6 +64,20 @@ public class Usuario {
         this._roles = _roles;
     }
 
+    
+    //constructor sin ID
+    public Usuario(String _nombre, String _apellido, String _direccion, String _email, String _password,
+            Collection<Rol> _roles) {
+        this._nombre = _nombre;
+        this._apellido = _apellido;
+        this._direccion = _direccion;
+        this._email = _email;
+        this._password = _password;
+        this._roles = _roles;
+    }
+
+
+
     //constructor vacio
     public Usuario() {
     }

@@ -26,6 +26,12 @@ public class Rol {
         this._nombre = _nombre;
     }
 
+    
+    //constructor de nombre
+    public Rol(String _nombre) {
+        this._nombre = _nombre;
+    }
+
     // constructor vacio
     public Rol() {
     }

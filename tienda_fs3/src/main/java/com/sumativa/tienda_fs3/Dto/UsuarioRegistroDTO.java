@@ -20,6 +20,15 @@ public class UsuarioRegistroDTO {
         this._password = _password;
     }
 
+    // constructor sin ID
+    public UsuarioRegistroDTO(String _nombre, String _apellido, String _direccion, String _email, String _password) {
+        this._nombre = _nombre;
+        this._apellido = _apellido;
+        this._direccion = _direccion;
+        this._email = _email;
+        this._password = _password;
+    }
+
     // constructor email
     public UsuarioRegistroDTO(String _email) {
         this._email = _email;
