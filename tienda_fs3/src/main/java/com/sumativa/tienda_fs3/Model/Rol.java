@@ -1,6 +1,6 @@
 package com.sumativa.tienda_fs3.Model;
 
-
+import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -8,46 +8,28 @@ import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 
 @Entity
-@Table(name = "rol")
+@Table(name ="roles")
 public class Rol {
-
-    // atributos
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    private String nombre;
 
-    // constructor
-    public Rol(Long _id, String _nombre) {
-        this.id = _id;
-        this.nombre = _nombre;
-    }
+    @Column(unique = true)
+    private String name;
 
-    
-    //constructor de nombre
-    public Rol(String _nombre) {
-        this.nombre = _nombre;
-    }
-
-    // constructor vacio
-    public Rol() {
-    }
-
-    // getter and setter
-    public Long get_id() {
+    public Long getId() {
         return id;
     }
 
-    public void set_id(Long _id) {
-        this.id = _id;
+    public void setId(Long id) {
+        this.id = id;
     }
 
-    public String get_nombre() {
-        return nombre;
+    public String getName() {
+        return name;
     }
 
-    public void set_nombre(String _nombre) {
-        this.nombre = _nombre;
+    public void setName(String name) {
+        this.name = name;
     }
-
 }
