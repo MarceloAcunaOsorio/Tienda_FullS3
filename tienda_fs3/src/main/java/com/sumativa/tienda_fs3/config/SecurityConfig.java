@@ -54,6 +54,7 @@ public class SecurityConfig {
                         authorization -> authorization
                                 .requestMatchers("/api/login").permitAll()
                                 .requestMatchers("/api/register").permitAll()
+                                .requestMatchers("/api/home").permitAll()
                                 .requestMatchers("/admin").hasAnyAuthority("ADMIN")
                                 .requestMatchers("/user").hasAnyAuthority("USER")
                                 .anyRequest().authenticated()
