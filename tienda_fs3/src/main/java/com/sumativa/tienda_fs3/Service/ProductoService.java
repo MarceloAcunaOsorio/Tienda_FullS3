@@ -2,9 +2,7 @@ package com.sumativa.tienda_fs3.Service;
 
 import java.util.List;
 import java.util.Optional;
-
 import com.sumativa.tienda_fs3.Model.Producto;
-
 
 public interface ProductoService {
  
