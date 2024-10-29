@@ -24,8 +24,8 @@ public class ProductoServiceImpl implements ProductoService {
 
     //Consultar Producto por ID
     @Override
-    public Optional<Producto>getProductoById(Long id){
-        return productoRepository.findById(id);
+    public Optional<Producto>getProductoById(Long _IdProducto){
+        return productoRepository.findById(_IdProducto);
     }
 
     //Crear Producto
@@ -37,9 +37,9 @@ public class ProductoServiceImpl implements ProductoService {
 
     //Actualizar Producto
     @Override
-    public Producto updateProducto(Long id, Producto producto){
-        if (productoRepository.existsById(id)) {
-            producto.set_IdProducto(id);
+    public Producto updateProducto(Long _IdProducto, Producto producto){
+        if (productoRepository.existsById(_IdProducto)) {
+            producto.set_IdProducto(_IdProducto);
             return productoRepository.save(producto);
         }
         else
@@ -51,7 +51,7 @@ public class ProductoServiceImpl implements ProductoService {
 
     //borrar producto
     @Override
-    public void deleteProducto(Long id){
-        productoRepository.deleteById(id);
+    public void deleteProducto(Long _IdProducto){
+        productoRepository.deleteById(_IdProducto);
     }
 }

@@ -1,7 +1,9 @@
 package com.sumativa.tienda_fs3.Controller;
 
+import java.util.List;
 import java.util.Optional;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -18,15 +20,13 @@ import com.sumativa.tienda_fs3.Service.ProductoService;
 @RestController
 public class VerifyTokenController {
     
+    @Autowired
     private ProductoService productoService;
 
     @RequestMapping("/token")
     public String token() {
         return "Hola si funciona el token de acceso!";
     }
-
-
-
     
     //Seccion de admin
     @RequestMapping("/admin")
@@ -56,6 +56,11 @@ public class VerifyTokenController {
 
 
 
+
+    @GetMapping("/user/listado")
+    public List<Producto>getAllProducto(){
+        return productoService.getAllProductos();
+    }
 
 
     //Seccion de usuario

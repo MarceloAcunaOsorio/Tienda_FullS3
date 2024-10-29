@@ -10,11 +10,11 @@ public interface ProductoService {
     List<Producto> getAllProductos();
 
     //buscar producto por id
-    Optional<Producto> getProductoById(Long Id);
+    Optional<Producto> getProductoById(Long _IdProducto);
  
     //metodo para actualizar, crear y eliminar
-    Producto createProducto(Producto producto);
-    Producto updateProducto(Long id, Producto producto);
-    void deleteProducto(Long id);
+    Producto createProducto(Producto _IdProducto);
+    Producto updateProducto(Long _IdProducto, Producto producto);
+    void deleteProducto(Long _IdProducto);
 
 }
