@@ -36,34 +36,49 @@ public class VerifyTokenController {
 
     //Crear
     @PostMapping("/admin/crearproducto")
-    public Producto createProducto(@RequestBody Producto producto){
+    public Producto createProductoAdmin(@RequestBody Producto producto){
       return productoService.createProducto(producto);
     }
 
-    //Actualizar
+    //Actualizar actualizar
     @PutMapping("/admin/actualizar/{id}")
-    public Producto updateProducto(@PathVariable Long id, @RequestBody Producto producto){
+    public Producto updateProductoAdmin(@PathVariable Long id, @RequestBody Producto producto){
         return productoService.updateProducto(id, producto);
     }
 
-    //Eliminar
+    //Eliminar producto
     @DeleteMapping("/admin/eliminar/{id}")
-    public void deleteProducto(@PathVariable Long id){
+    public void deleteProductoAdmin(@PathVariable Long id){
         productoService.deleteProducto(id);
     }
 
+    //Listar producto
+    @GetMapping("/admin/listado")
+    public List<Producto>getAllProductoadmin(){
+        return productoService.getAllProductos();
+    }
 
+    //buscar producto
+    @GetMapping("/admin/{id}")
+    public Optional<Producto>getProductoAdminById(@PathVariable Long id){
+        return productoService.getProductoById(id);
+    }
 
-
-
-
-    @GetMapping("/user/listado")
-    public List<Producto>getAllProducto(){
+    @GetMapping("admin/home")
+    public List<Producto>getAllProductosadmin(){
         return productoService.getAllProductos();
     }
 
 
+
+
+    
     //Seccion de usuario
+    @GetMapping("user/home")
+    public List<Producto>getAllProductosUser(){
+        return productoService.getAllProductos();
+    }
+
     @GetMapping("/user/{id}")
     public Optional<Producto>getProductoById(@PathVariable Long id){
         return productoService.getProductoById(id);

@@ -21,7 +21,7 @@ import com.sumativa.tienda_fs3.Service.RolService;
 import com.sumativa.tienda_fs3.Service.UserService;
 import com.sumativa.tienda_fs3.dto.JwtResponseDto;
 import com.sumativa.tienda_fs3.dto.LoginDto;
-import com.sumativa.tienda_fs3.dto.ProductoDto;
+
 import com.sumativa.tienda_fs3.dto.RegisterDto;
 import com.sumativa.tienda_fs3.dto.UserDto;
 import com.sumativa.tienda_fs3.security.JwtGenerator;

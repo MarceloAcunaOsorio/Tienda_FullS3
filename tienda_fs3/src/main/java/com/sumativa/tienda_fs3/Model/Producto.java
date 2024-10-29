@@ -18,33 +18,32 @@ public class Producto {
     @Column(name ="IdProducto")
     private Long _IdProducto;
 
-    @NotNull
+    @NotNull(message = "Nombre no debe ser nulo")
     @Size(min = 4, max = 50)
     @Column(name = "nombre")
     private String _NombreProducto;
 
-    @NotNull
+    @NotNull(message = "Descripcion no debe ser nulo")
     @Size(min = 4,max = 150)
     @Column(name="descripcion")
     private String _DescripcionProducto;
 
-    @NotNull
+    @NotNull(message = "Modelo no debe ser nulo")
     @Size(min = 4, max = 50)
     @Column(name = "modelo")
     private String _ModeloProducto;
 
-    @NotNull
+    @NotNull(message = "Marca no debe ser nulo")
     @Size(min = 4, max = 50)
     @Column(name = "marca")
     private String _MarcaProducto;
 
-    @NotNull
-    @Size(min = 4, max = 50)
+    @NotNull(message = "Talla no debe ser nulo")
     @Column(name = "talla")
     private int _TallaProducto;
 
-    @NotNull
-    @Size(min = 4, max = 50)
+    @NotNull(message = "Color no debe ser nulo")
+    @Size(min = 3, max = 50)
     @Column(name = "color")
     private String _ColorProducto;
 
