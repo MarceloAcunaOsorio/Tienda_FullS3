@@ -21,7 +21,7 @@ import com.sumativa.tienda_fs3.Repository.UserRepository;
 @Transactional(readOnly=true)
 public class UserDetailsServiceImpl implements UserDetailsService {
     
-     @Autowired
+    @Autowired
     private UserRepository userRepository;
 
     @Override

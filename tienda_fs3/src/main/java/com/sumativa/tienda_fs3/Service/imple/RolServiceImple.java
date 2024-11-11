@@ -14,7 +14,7 @@ import com.sumativa.tienda_fs3.Service.RolService;
 @Service
 public class RolServiceImple implements RolService{
     
-     @Autowired
+    @Autowired
     private RoleRepository roleRepository;
     @Override
     public Optional<Rol> findByname(String name) {
